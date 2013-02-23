@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="component" method="upgrade">
+	<name>Shop Migrator</name>
+	<author>Daniel Eliasson Stilero Webdesign http://www.stilero.com</author>
+	<creationDate>2012-okt-07</creationDate>
+	<copyright>Copyright (c) 2012-okt-07 Stilero Webdesign, Stilero AB. All rights reserved.</copyright>
+	<authorEmail>joomla@stilero.com</authorEmail>
+	<authorUrl>www.stilero.com</authorUrl>
+	<version>1.0</version>
+	<license>GPLv2</license>
+	<description>COM_SHOPMIGRATOR_DESC</description>
+	<install>
+            <sql>
+                <file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+            </sql>
+	</install>
+	<uninstall>
+            <sql>
+                <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+            </sql>
+	</uninstall>
+	<languages folder="language">
+            <language tag="en-GB">admin/language/en-GB.com_shopmigrator.ini</language>
+            <language tag="en-GB">admin/language/en-GB.com_shopmigrator.sys.ini</language>
+        </languages>
+	<administration>
+            <!-- Administration Menu Section -->
+           <menu img="components/com_shopmigrator/assets/images/shopmigrator-cart-16.png" link="index.php?option=com_shopmigrator">ShopMigrator</menu>
+            <files folder="admin">
+                    <filename>index.html</filename>
+                    <filename>config.xml</filename>
+                    <filename>admin.shopmigrator.php</filename>
+                    <filename>controller.php</filename>
+                    <folder>views</folder>
+                    <folder>controllers</folder>
+                    <folder>classes</folder>
+                    <folder>helpers</folder>
+                    <folder>tables</folder>
+                    <folder>assets</folder>
+                    <folder>models</folder>
+                    <folder>sql</folder>
+            </files>
+            <languages folder="language">
+	       <language tag="en-GB">admin/language/en-GB.com_shopmigrator.ini</language>
+               <language tag="en-GB">admin/language/en-GB.com_shopmigrator.ini</language>
+	    </languages>
+	</administration>
+</install>
